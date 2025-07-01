@@ -43,9 +43,33 @@ class DataFetcher:
         Path(self.storage_config['raw_path']).mkdir(parents=True, exist_ok=True)
         logger.info(f"DataFetcher inicializado para {self.symbol}/{self.interval}")
 
-    def fetch_ohlcv(self, start_date: str, end_date: str) -> pd.DataFrame:
-        """Método principal para obtener datos OHLCV"""
+    def fetch_ohlcv(self, start_date, end_date):
+        """
+        Descarga los datos OHLCV, los guarda en data/raw/ y retorna el DataFrame.
+        """
+        df = self.fetch_data(start_date, end_date)
+        if df is not None and not df.empty:
+            self.save_raw_data(df, start_date, end_date)
         return self.fetch_data(start_date, end_date)
+
+    
+    def save_raw_data(self, df, start_date, end_date):
+        """
+        Guarda el DataFrame en data/raw/ con nombre estándar.
+        """
+        start_fmt = start_date.replace("-", "")
+        end_fmt = end_date.replace("-", "")
+        symbol = self.symbol.upper()
+        interval = self.interval
+        file_name = f"{symbol}_{interval}_{start_fmt}_{end_fmt}.parquet"
+        # Asegura la ruta absoluta desde el proyecto
+        project_root = Path(__file__).resolve().parent.parent
+        raw_dir = project_root / "data" / "raw"
+        raw_dir.mkdir(parents=True, exist_ok=True)
+        file_path = raw_dir / file_name
+        df.to_parquet(file_path)
+        logging.info(f"Archivo guardado: {file_path}")
+        return file_path
 
     def fetch_data(self, start_date: str, end_date: str) -> pd.DataFrame:
         """Método para descargar los datos con lógica de paginación automática"""
@@ -282,7 +306,7 @@ def fetch_and_save_data():
     )
     
     if not df.empty:
-        filepath = fetcher.save_data(df)
+        filepath = fetcher.save_raw_data(df)
         logger.info(f"Datos descargados exitosamente. Registros: {len(df)}")
         logger.info(f"Archivo guardado: {filepath}")
         return df
