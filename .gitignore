@@ -1,0 +1,8 @@
+# .gitignore
+trading_env/
+__pycache__/
+*.pyc
+*.parquet
+*.csv
+.ipynb_checkpoints/
+.env

@@ -1,0 +1,84 @@
+# CONFIGURACIÓN PRINCIPAL DEL PROYECTO
+project:
+  name: "BTC/USDT Trading System"
+  base_currency: "USDT"
+  risk_free_rate: 0.02  # Tasa libre de riesgo anual para cálculos (2%)
+
+# CONFIGURACIÓN DE EXTRACCIÓN DE DATOS
+data_fetcher:
+  symbol: "BTCUSDT"
+  timeframe: "1h"       # Opciones: 1m, 5m, 15m, 1h, 4h, 1d
+  start_date: "2024-01-01"  # Fecha más reciente
+  end_date: "2024-07-01"    # Fecha actual
+  api:
+    name: "bitunix"
+    base_url: "https://api.binance.com"
+    endpoint: "/api/v3/klines"
+    api_key: ""         # Dejar vacío si no se requiere autenticación
+    max_retries: 3
+    rate_limit: 10      # Llamadas por segundo
+  storage:
+    raw_path: "../data/raw"
+    processed_path: "../data/processed"
+    file_format: "parquet"
+    cache_enabled: true
+
+# CONFIGURACIÓN DE INDICADORES TÉCNICOS
+feature_engine:
+  indicators:
+    - name: "SMA"
+      params:
+        window: 20
+        column: "close"
+    - name: "EMA"
+      params:
+        window: 50
+        column: "close"
+    - name: "RSI"
+      params:
+        window: 14
+        column: "close"
+    - name: "BollingerBands"
+      params:
+        window: 20
+        window_dev: 2
+    - name: "MACD"
+      params:
+        fast_period: 12
+        slow_period: 26
+        signal_period: 9
+  derived_features:
+    - name: "price_sma_distance"
+      formula: "(close - SMA_20) / (rolling_std_20 * 2)"  # Distancia en desviaciones estándar
+    - name: "bollinger_width"
+      formula: "(bollinger_hband - bollinger_lband) / bollinger_mavg"
+
+# CONFIGURACIÓN DE ESTRATEGIA
+strategy:
+  name: "moving_average_crossover"  # Opciones: moving_average_crossover, random_forest
+  params:
+    # Parámetros para estrategia de cruce de medias
+    fast_ma: "SMA_20"
+    slow_ma: "SMA_50"
+    rsi_buy_threshold: 30
+    rsi_sell_threshold: 70
+    # Parámetros para modelo Random Forest
+    model_path: "../models/random_forest.pkl"
+    features: ["SMA_20", "EMA_50", "RSI_14", "MACD_12_26_9"]
+
+# CONFIGURACIÓN DE BACKTESTING
+backtest:
+  initial_capital: 10000.0
+  commission: 0.001    # 0.1% por operación
+  slippage: 0.0005     # 0.05% de deslizamiento
+  position_size: 0.95  # % del capital por operación
+  metrics:
+    - "total_return"
+    - "cagr"
+    - "sharpe_ratio"
+    - "max_drawdown"
+    - "win_rate"
+  output:
+    reports_path: "../reports"
+    plots_path: "../reports/plots"
+    save_format: "html"  # Opciones: html, png, pdf
