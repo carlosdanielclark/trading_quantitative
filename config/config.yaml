@@ -7,78 +7,52 @@ project:
 # CONFIGURACIÓN DE EXTRACCIÓN DE DATOS
 data_fetcher:
   symbol: "BTCUSDT"
-  timeframe: "1h"       # Opciones: 1m, 5m, 15m, 1h, 4h, 1d
-  start_date: "2024-01-01"  # Fecha más reciente
-  end_date: "2024-07-01"    # Fecha actual
+  interval: "1h"       # Opciones: 1m, 5m, 15m, 30m, 1h, 2h, 4h, 6h, 8h, 12h, 1d, 3d, 1w, 1M
+  start_date: "2024-01-01"
+  end_date: "2024-07-01"
   api:
     name: "bitunix"
-    base_url: "https://api.binance.com"
-    endpoint: "/api/v3/klines"
-    api_key: ""         # Dejar vacío si no se requiere autenticación
+    key: ""              # Tu API key (opcional para klines)
+    secret: ""           # Tu API secret (cambio de secret_key a secret)
+    base_url: "https://fapi.bitunix.com"
+    endpoint: "/api/v1/futures/market/kline"
     max_retries: 3
-    rate_limit: 10      # Llamadas por segundo
+    rate_limit: 10       # Máximo 10 req/sec según documentación oficial
+    timeout: 30          # Timeout en segundos
   storage:
-    raw_path: "../data/raw"
-    processed_path: "../data/processed"
+    raw_path: "data/raw"
+    processed_path: "data/processed"
     file_format: "parquet"
     cache_enabled: true
 
-# CONFIGURACIÓN DE INDICADORES TÉCNICOS
+# CONFIGURACIÓN DEL MOTOR DE FEATURES
 feature_engine:
   indicators:
-    - name: "SMA"
+    - name: "rsi"
       params:
-        window: 20
-        column: "close"
-    - name: "EMA"
+        period: 14
+    - name: "bollinger_bands"
       params:
-        window: 50
-        column: "close"
-    - name: "RSI"
+        period: 20
+        std_dev: 2
+    - name: "ema"
       params:
-        window: 14
-        column: "close"
-    - name: "BollingerBands"
+        period: 12
+    - name: "ema"
       params:
-        window: 20
-        window_dev: 2
-    - name: "MACD"
-      params:
-        fast_period: 12
-        slow_period: 26
-        signal_period: 9
-  derived_features:
-    - name: "price_sma_distance"
-      formula: "(close - SMA_20) / (rolling_std_20 * 2)"  # Distancia en desviaciones estándar
-    - name: "bollinger_width"
-      formula: "(bollinger_hband - bollinger_lband) / bollinger_mavg"
+        period: 26
 
-# CONFIGURACIÓN DE ESTRATEGIA
+# CONFIGURACIÓN DE LA ESTRATEGIA
 strategy:
-  name: "moving_average_crossover"  # Opciones: moving_average_crossover, random_forest
-  params:
-    # Parámetros para estrategia de cruce de medias
-    fast_ma: "SMA_20"
-    slow_ma: "SMA_50"
-    rsi_buy_threshold: 30
-    rsi_sell_threshold: 70
-    # Parámetros para modelo Random Forest
-    model_path: "../models/random_forest.pkl"
-    features: ["SMA_20", "EMA_50", "RSI_14", "MACD_12_26_9"]
+  name: "rsi_bollinger_strategy"
+  parameters:
+    rsi_oversold: 30
+    rsi_overbought: 70
+    bollinger_entry_threshold: 0.02
 
-# CONFIGURACIÓN DE BACKTESTING
+# CONFIGURACIÓN DEL BACKTESTING
 backtest:
-  initial_capital: 10000.0
-  commission: 0.001    # 0.1% por operación
-  slippage: 0.0005     # 0.05% de deslizamiento
-  position_size: 0.95  # % del capital por operación
-  metrics:
-    - "total_return"
-    - "cagr"
-    - "sharpe_ratio"
-    - "max_drawdown"
-    - "win_rate"
-  output:
-    reports_path: "../reports"
-    plots_path: "../reports/plots"
-    save_format: "html"  # Opciones: html, png, pdf
+  initial_capital: 10000
+  commission: 0.001
+  start_date: "2024-01-01"
+  end_date: "2024-07-01"

@@ -19,7 +19,7 @@ if __name__ == "__main__":
     print("\n" + "="*50)
     print("✅ Configuración cargada exitosamente!")
     print(f"Símbolo: {cfg['data_fetcher']['symbol']}")
-    print(f"Timeframe: {cfg['data_fetcher']['timeframe']}")
+    print(f"Interval: {cfg['data_fetcher']['interval']}")
     print(f"Estrategia: {cfg['strategy']['name']}")
     print("Indicadores:")
     for indicator in cfg['feature_engine']['indicators']:
