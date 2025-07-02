@@ -51,7 +51,7 @@
     # Debe mostrar las librerías instaladas
 
 **4. Estructura de directorios**
-<details>
+
     ```text
     trading_quant_project/
     │
@@ -82,6 +82,6 @@
     ├── requirements.txt       # Dependencias del proyecto
     ├── README.md              # Este archivo de instrucciones
     └── run_pipeline.py        # Script de ejecución del pipeline
-</details>
+    ```
 **5. Ejecutar proyecto**
 > python run_pipeline
