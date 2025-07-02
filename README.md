@@ -1,5 +1,4 @@
-# Diseño, implementación y evaluación de una estrategia de trading cuantitativo 
-# sobre BTC/USDT usando datos históricos de Bitunix, indicadores técnicos y modelos de decisión
+# Diseño, implementación y evaluación de una estrategia de trading cuantitativo sobre BTC/USDT usando datos históricos de Bitunix, indicadores técnicos y modelos de decisión
 
 ## Configuración del entorno de trabajo
 
