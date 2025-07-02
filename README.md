@@ -51,6 +51,7 @@
     # Debe mostrar las librerías instaladas
 
 **4. Estructura de directorios**
+```text
 trading_quant_project/
 │
 ├── config/                # Archivos de configuración
