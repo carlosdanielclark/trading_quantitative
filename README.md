@@ -3,6 +3,7 @@
 ## Configuración del entorno de trabajo
 
 **1. Instalar Python**
+
     Si no tienes Python instalado:
 
     Descarga la última versión de Python 3.11+ desde   python.org
@@ -15,6 +16,7 @@
     > ⚠️ En este proyecto se usa Python 3.13.5 
 
 **2. Crear entorno virtual**
+
     mkdir trading_quant_project
     cd trading_quant_project
     python -m venv trading_env
@@ -24,6 +26,7 @@
     > trading_env\Scripts\activate
 
 **3. Instalar dependencias**
+
     Ejecuta en el entorno activado:
     pip install --upgrade pip
 
@@ -84,4 +87,5 @@
     └── run_pipeline.py        # Script de ejecución del pipeline
     ```
 **5. Ejecutar proyecto**
-> python run_pipeline
+
+    > python run_pipeline
