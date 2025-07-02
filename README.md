@@ -21,9 +21,9 @@
     cd trading_quant_project
     python -m venv trading_env
 
-    Activar entorno:
-    cmd: 
-    > trading_env\Scripts\activate
+-Activar entorno:
+
+    trading_env\Scripts\activate
 
 **3. Instalar dependencias**
 
