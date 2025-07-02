@@ -51,36 +51,37 @@
     # Debe mostrar las librerías instaladas
 
 **4. Estructura de directorios**
-```text
-trading_quant_project/
-│
-├── config/                # Archivos de configuración
-│   └── config.yaml        # Parámetros configurables (fechas, intervalos, etc.)
-│
-├── data/                  # Datos históricos y resultados de backtesting
-│   ├── raw/               # Datos crudos descargados
-│   └── processed/         # Datos procesados listos para análisis
-│
-├── notebooks/             # Notebooks Jupyter para análisis y prototipado
-│   └── exploratory.ipynb
-│
-├── src/                   # Código fuente de los módulos
-│   ├── __init__.py
-│   ├── data_fetcher.py    # Extracción de datos
-│   ├── feature_engine.py  # Cálculo de indicadores y features
-│   ├── strategy.py        # Implementación de la estrategia
-│   ├── backtest.py        # Backtesting
-│   └── utils.py           # Funciones auxiliares
-│
-├── test/                  # Tests unitarios
-│   ├── __init__.py        # Habilita discovery de pytest
-│   ├── test_config.py
-│   └── test_data_fetcher.py
-│
-├── pytest.ini             # Configuración de pytest
-├── requirements.txt       # Dependencias del proyecto
-├── README.md              # Este archivo de instrucciones
-└── run_pipeline.py        # Script de ejecución del pipeline
-
+<details>
+    ```text
+    trading_quant_project/
+    │
+    ├── config/                # Archivos de configuración
+    │   └── config.yaml        # Parámetros configurables (fechas, intervalos, etc.)
+    │
+    ├── data/                  # Datos históricos y resultados de backtesting
+    │   ├── raw/               # Datos crudos descargados
+    │   └── processed/         # Datos procesados listos para análisis
+    │
+    ├── notebooks/             # Notebooks Jupyter para análisis y prototipado
+    │   └── exploratory.ipynb
+    │
+    ├── src/                   # Código fuente de los módulos
+    │   ├── __init__.py
+    │   ├── data_fetcher.py    # Extracción de datos
+    │   ├── feature_engine.py  # Cálculo de indicadores y features
+    │   ├── strategy.py        # Implementación de la estrategia
+    │   ├── backtest.py        # Backtesting
+    │   └── utils.py           # Funciones auxiliares
+    │
+    ├── test/                  # Tests unitarios
+    │   ├── __init__.py        # Habilita discovery de pytest
+    │   ├── test_config.py
+    │   └── test_data_fetcher.py
+    │
+    ├── pytest.ini             # Configuración de pytest
+    ├── requirements.txt       # Dependencias del proyecto
+    ├── README.md              # Este archivo de instrucciones
+    └── run_pipeline.py        # Script de ejecución del pipeline
+</details>
 **5. Ejecutar proyecto**
 > python run_pipeline
