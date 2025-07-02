@@ -54,31 +54,32 @@
 trading_quant_project/
 │
 ├── config/                # Archivos de configuración
-│   └── config.yaml       # Parámetros configurables como fechas, intervalos, etc.
+│   └── config.yaml        # Parámetros configurables (fechas, intervalos, etc.)
 │
-├── data/                  # Carpeta para almacenar datos históricos y resultados de backtesting
+├── data/                  # Datos históricos y resultados de backtesting
 │   ├── raw/               # Datos crudos descargados
-│   └── processed/         # Datos procesados y listos para análisis
+│   └── processed/         # Datos procesados listos para análisis
 │
-├── notebooks/             # Notebooks Jupyter para análisis y prueba de estrategias
+├── notebooks/             # Notebooks Jupyter para análisis y prototipado
+│   └── exploratory.ipynb
 │
-├── src/                   # Código fuente (módulos)
+├── src/                   # Código fuente de los módulos
 │   ├── __init__.py
-│   ├── data_fetcher.py    # Módulo para extracción de datos
-│   ├── feature_engine.py  # Módulo para cálculo de indicadores y features
-│   ├── strategy.py       # Módulo para la implementación de la estrategia
-│   ├── backtest.py       # Módulo para el backtesting
-│   └── utils.py          # Funciones auxiliares
+│   ├── data_fetcher.py    # Extracción de datos
+│   ├── feature_engine.py  # Cálculo de indicadores y features
+│   ├── strategy.py        # Implementación de la estrategia
+│   ├── backtest.py        # Backtesting
+│   └── utils.py           # Funciones auxiliares
 │
-├── test/                   # Código fuente (módulos)
-│   ├── __init__.py
+├── test/                  # Tests unitarios
+│   ├── __init__.py        # Habilita discovery de pytest
 │   ├── test_config.py
-│   └──  test_data_fetcher.py  
+│   └── test_data_fetcher.py
 │
-├── pytest.ini
-├── requirements.txt      # Dependencias del proyecto
-├── README.md             # Documento de instrucciones y descripción del proyecto
-└── run_pipeline.py       # Script principal para ejecutar el pipeline de trading
+├── pytest.ini             # Configuración de pytest
+├── requirements.txt       # Dependencias del proyecto
+├── README.md              # Este archivo de instrucciones
+└── run_pipeline.py        # Script de ejecución del pipeline
 
 **5. Ejecutar proyecto**
 > python run_pipeline
