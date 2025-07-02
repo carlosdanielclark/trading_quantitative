@@ -49,27 +49,8 @@ class DataFetcher:
         """
         df = self.fetch_data(start_date, end_date)
         if df is not None and not df.empty:
-            self.save_raw_data(df, start_date, end_date)
+            self.save_data(df)
         return self.fetch_data(start_date, end_date)
-
-    
-    def save_raw_data(self, df, start_date, end_date):
-        """
-        Guarda el DataFrame en data/raw/ con nombre estándar.
-        """
-        start_fmt = start_date.replace("-", "")
-        end_fmt = end_date.replace("-", "")
-        symbol = self.symbol.upper()
-        interval = self.interval
-        file_name = f"{symbol}_{interval}_{start_fmt}_{end_fmt}.parquet"
-        # Asegura la ruta absoluta desde el proyecto
-        project_root = Path(__file__).resolve().parent.parent
-        raw_dir = project_root / "data" / "raw"
-        raw_dir.mkdir(parents=True, exist_ok=True)
-        file_path = raw_dir / file_name
-        df.to_parquet(file_path)
-        logging.info(f"Archivo guardado: {file_path}")
-        return file_path
 
     def fetch_data(self, start_date: str, end_date: str) -> pd.DataFrame:
         """Método para descargar los datos con lógica de paginación automática"""
@@ -269,30 +250,60 @@ class DataFetcher:
         signature = hashlib.sha256(sign_input.encode()).hexdigest()
 
         return nonce, timestamp, signature
-
+    
+    # def save_raw_data(self, df, start_date, end_date):
+    #     """
+    #     Guarda el DataFrame en data/raw/ con nombre estándar.
+    #     """
+    #     start_fmt = start_date.replace("-", "")
+    #     end_fmt = end_date.replace("-", "")
+    #     symbol = self.symbol.upper()
+    #     interval = self.interval
+    #     file_name = f"{symbol}_{interval}_{start_fmt}_{end_fmt}.parquet"
+    #     # Asegura la ruta absoluta desde el proyecto
+    #     project_root = Path(__file__).resolve().parent.parent
+    #     raw_dir = project_root / "data" / "raw"
+    #     raw_dir.mkdir(parents=True, exist_ok=True)
+    #     file_path = raw_dir / file_name
+    #     df.to_parquet(file_path)
+    #     logging.info(f"Archivo guardado: {file_path}")
+    #     return file_path
+    
     def save_data(self, df: pd.DataFrame, filename: str = None) -> str:
-        """Guarda los datos en el formato especificado"""
+        """Guarda los datos en el formato especificado dentro de la raíz del proyecto."""
         if df.empty:
             logger.warning("No hay datos para guardar")
             return ""
-            
+
+        # Determinar la raíz del proyecto (dos niveles arriba de este archivo)
+        project_root = Path(__file__).resolve().parent.parent
+
+        # Nombre de archivo por defecto si no se proporciona
         if filename is None:
-            filename = f"{self.symbol}_{self.interval}_{self.config['start_date']}_{self.config['end_date']}"
-        
-        file_format = self.storage_config['file_format']
-        raw_path = Path(self.storage_config['raw_path'])
-        
+            sd = self.config['start_date']
+            ed = self.config['end_date']
+            filename = f"{self.symbol}_{self.interval}_{sd}_{ed}"
+
+        # Ruta relativa configurada (ej. "data/raw")
+        raw_subpath = Path(self.storage_config['raw_path'].lstrip("/\\"))
+
+        # Ruta absoluta final: raíz del proyecto + subcarpeta
+        raw_path = project_root / raw_subpath
+        raw_path.mkdir(parents=True, exist_ok=True)
+
+        # Construir y guardar según el formato
+        file_format = self.storage_config['file_format'].lower()
+        filepath = raw_path / f"{filename}.{file_format}"
+
         if file_format == 'parquet':
-            filepath = raw_path / f"{filename}.parquet"
             df.to_parquet(filepath)
         elif file_format == 'csv':
-            filepath = raw_path / f"{filename}.csv"
             df.to_csv(filepath)
         else:
             raise ValueError(f"Formato no soportado: {file_format}")
-        
+
         logger.info(f"Datos guardados en: {filepath}")
-        return str(filepath)
+        return str
 
 # Función para usar externamente
 def fetch_and_save_data():
@@ -306,7 +317,7 @@ def fetch_and_save_data():
     )
     
     if not df.empty:
-        filepath = fetcher.save_raw_data(df)
+        filepath = fetcher.save_data(df)
         logger.info(f"Datos descargados exitosamente. Registros: {len(df)}")
         logger.info(f"Archivo guardado: {filepath}")
         return df

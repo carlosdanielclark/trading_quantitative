@@ -80,3 +80,6 @@ trading_quant_project/
 ├── requirements.txt      # Dependencias del proyecto
 ├── README.md             # Documento de instrucciones y descripción del proyecto
 └── run_pipeline.py       # Script principal para ejecutar el pipeline de trading
+
+**5. Ejecutar proyecto**
+> python run_pipeline
