@@ -29,18 +29,30 @@ data_fetcher:
 feature_engine:
   indicators:
     - name: "rsi"
+      normalize: true
+      scaler: "minmax"  # Espesífico para RSI
       params:
         period: 14
     - name: "bollinger_bands"
+      normalize: false
       params:
         period: 20
         std_dev: 2
     - name: "ema"
+      normalize: true
+      scaler: "standard"
       params:
         period: 12
     - name: "ema"
+      normalize: true
+      scaler: "standard"
       params:
         period: 26
+    - name: "sma"
+      normalize: true
+      scaler: "standard"
+      params:
+        period: 20
 
 # CONFIGURACIÓN DE LA ESTRATEGIA
 strategy:

@@ -1,9 +1,18 @@
+import sys
+import os
+
+# Añade la raíz del proyecto al sys.path
+root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if root not in sys.path:
+    sys.path.insert(0, root)
+
 import pytest
 import pandas as pd
 from unittest.mock import patch, MagicMock
 from pathlib import Path
 import yaml
 from src.data_fetcher import DataFetcher
+from src.utils import load_config
 
 def load_config() -> dict:
     """Carga la configuración de prueba"""

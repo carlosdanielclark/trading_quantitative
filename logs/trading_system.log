@@ -1,0 +1,229 @@
+2025-07-03 23:38:15,707 - src.plugins - INFO - Indicador 'sma' registrado exitosamente
+2025-07-03 23:38:15,708 - src.plugins - INFO - Indicador 'ema' registrado exitosamente
+2025-07-03 23:38:15,709 - src.plugins - INFO - Indicador 'rsi' registrado exitosamente
+2025-07-03 23:38:15,711 - src.plugins - INFO - Indicador 'bollinger_bands' registrado exitosamente
+2025-07-03 23:38:15,713 - src.plugins - INFO - Indicador 'macd' registrado exitosamente
+2025-07-03 23:38:15,715 - src.plugins - INFO - Indicador 'atr' registrado exitosamente
+2025-07-03 23:38:15,717 - src.plugins - INFO - Indicador 'stochastic' registrado exitosamente
+2025-07-03 23:38:15,719 - src.plugins - INFO - Indicador 'volume_sma' registrado exitosamente
+2025-07-03 23:38:15,721 - src.plugins - INFO - Indicador 'price_volume_trend' registrado exitosamente
+2025-07-03 23:38:15,722 - src.plugins - INFO - Indicador 'momentum' registrado exitosamente
+2025-07-03 23:38:15,724 - src.plugins - INFO - Indicador 'volatility' registrado exitosamente
+2025-07-03 23:38:15,725 - src.plugins - INFO - Indicador 'support_resistance' registrado exitosamente
+2025-07-03 23:38:15,737 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-03 23:38:15,742 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-03 23:39:12,722 - src.feature_engine - WARNING - Valores faltantes detectados en rsi, aplicando imputación
+2025-07-03 23:39:12,733 - src.feature_engine - INFO - Serie rsi normalizada con minmax
+2025-07-03 23:39:12,735 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-03 23:39:12,736 - src.feature_engine - ERROR - Error calculando indicador bollinger_bands: 'function' object has no attribute 'BollingerBands'
+2025-07-03 23:44:36,806 - src.feature_engine - INFO - Usando cache para rsi{'period': 14}
+2025-07-03 23:44:36,808 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-03 23:44:36,809 - src.feature_engine - ERROR - Error calculando indicador bollinger_bands: 'function' object has no attribute 'BollingerBands'
+2025-07-03 23:50:22,797 - src.plugins - INFO - Indicador 'sma' registrado exitosamente
+2025-07-03 23:50:22,798 - src.plugins - INFO - Indicador 'ema' registrado exitosamente
+2025-07-03 23:50:22,799 - src.plugins - INFO - Indicador 'rsi' registrado exitosamente
+2025-07-03 23:50:22,799 - src.plugins - INFO - Indicador 'bollinger_bands' registrado exitosamente
+2025-07-03 23:50:22,800 - src.plugins - INFO - Indicador 'macd' registrado exitosamente
+2025-07-03 23:50:22,802 - src.plugins - INFO - Indicador 'atr' registrado exitosamente
+2025-07-03 23:50:22,803 - src.plugins - INFO - Indicador 'stochastic' registrado exitosamente
+2025-07-03 23:50:22,803 - src.plugins - INFO - Indicador 'volume_sma' registrado exitosamente
+2025-07-03 23:50:22,804 - src.plugins - INFO - Indicador 'price_volume_trend' registrado exitosamente
+2025-07-03 23:50:22,805 - src.plugins - INFO - Indicador 'momentum' registrado exitosamente
+2025-07-03 23:50:22,805 - src.plugins - INFO - Indicador 'volatility_hist' registrado exitosamente
+2025-07-03 23:50:22,806 - src.plugins - INFO - Indicador 'support_resistance' registrado exitosamente
+2025-07-03 23:50:22,811 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-03 23:50:22,813 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-03 23:50:27,059 - src.feature_engine - ERROR - Error calculando indicador rsi: 'function' object has no attribute 'rsi'
+2025-07-03 23:55:42,432 - src.feature_engine - ERROR - Error calculando indicador rsi: 'function' object has no attribute 'rsi'
+2025-07-03 23:56:13,050 - src.plugins - INFO - Indicador 'sma' registrado exitosamente
+2025-07-03 23:56:13,051 - src.plugins - INFO - Indicador 'ema' registrado exitosamente
+2025-07-03 23:56:13,052 - src.plugins - INFO - Indicador 'rsi' registrado exitosamente
+2025-07-03 23:56:13,053 - src.plugins - INFO - Indicador 'bollinger_bands' registrado exitosamente
+2025-07-03 23:56:13,054 - src.plugins - INFO - Indicador 'macd' registrado exitosamente
+2025-07-03 23:56:13,054 - src.plugins - INFO - Indicador 'atr' registrado exitosamente
+2025-07-03 23:56:13,055 - src.plugins - INFO - Indicador 'stochastic' registrado exitosamente
+2025-07-03 23:56:13,056 - src.plugins - INFO - Indicador 'volume_sma' registrado exitosamente
+2025-07-03 23:56:13,056 - src.plugins - INFO - Indicador 'price_volume_trend' registrado exitosamente
+2025-07-03 23:56:13,057 - src.plugins - INFO - Indicador 'momentum' registrado exitosamente
+2025-07-03 23:56:13,058 - src.plugins - INFO - Indicador 'volatility_hist' registrado exitosamente
+2025-07-03 23:56:13,059 - src.plugins - INFO - Indicador 'support_resistance' registrado exitosamente
+2025-07-03 23:56:13,064 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-03 23:56:13,066 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-03 23:56:16,490 - src.feature_engine - ERROR - Error calculando indicador rsi: tm() got an unexpected keyword argument 'window'
+2025-07-04 00:02:39,068 - src.plugins - INFO - Indicador 'sma' registrado exitosamente
+2025-07-04 00:02:39,079 - src.plugins - INFO - Indicador 'ema' registrado exitosamente
+2025-07-04 00:02:39,079 - src.plugins - INFO - Indicador 'rsi' registrado exitosamente
+2025-07-04 00:02:39,080 - src.plugins - INFO - Indicador 'bollinger_bands' registrado exitosamente
+2025-07-04 00:02:39,081 - src.plugins - INFO - Indicador 'macd' registrado exitosamente
+2025-07-04 00:02:39,082 - src.plugins - INFO - Indicador 'atr' registrado exitosamente
+2025-07-04 00:02:39,082 - src.plugins - INFO - Indicador 'stochastic' registrado exitosamente
+2025-07-04 00:02:39,083 - src.plugins - INFO - Indicador 'volume_sma' registrado exitosamente
+2025-07-04 00:02:39,084 - src.plugins - INFO - Indicador 'price_volume_trend' registrado exitosamente
+2025-07-04 00:02:39,084 - src.plugins - INFO - Indicador 'momentum' registrado exitosamente
+2025-07-04 00:02:39,085 - src.plugins - INFO - Indicador 'volatility' registrado exitosamente
+2025-07-04 00:02:39,086 - src.plugins - INFO - Indicador 'support_resistance' registrado exitosamente
+2025-07-04 00:02:39,093 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-04 00:02:39,095 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-04 00:02:41,496 - src.feature_engine - WARNING - Valores faltantes detectados en rsi, aplicando imputación
+2025-07-04 00:02:41,502 - src.feature_engine - INFO - Serie rsi normalizada con minmax
+2025-07-04 00:02:41,504 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-04 00:02:41,522 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-04 00:02:41,526 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 00:02:41,526 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-04 00:02:41,529 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 00:02:41,530 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-04 00:02:41,532 - src.feature_engine - WARNING - Valores faltantes detectados en sma, aplicando imputación
+2025-07-04 00:02:41,534 - src.feature_engine - INFO - Serie sma normalizada con standard
+2025-07-04 00:02:41,537 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-04 00:04:24,706 - src.feature_engine - INFO - Usando cache para rsi{'period': 14}
+2025-07-04 00:04:24,708 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-04 00:06:57,960 - src.feature_engine - INFO - Usando cache para rsi{'period': 14}
+2025-07-04 00:06:57,964 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-04 00:06:57,972 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-04 00:06:57,973 - src.feature_engine - INFO - Usando cache para ema{'period': 12}
+2025-07-04 00:06:57,974 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-04 00:06:57,976 - src.feature_engine - INFO - Usando cache para ema{'period': 26}
+2025-07-04 00:06:57,978 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-04 00:06:57,981 - src.feature_engine - INFO - Usando cache para sma{'period': 20}
+2025-07-04 00:06:57,985 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-04 00:11:54,575 - src.feature_engine - INFO - Usando cache para rsi{'period': 14}
+2025-07-04 00:11:54,577 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-04 00:11:54,583 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-04 00:11:54,584 - src.feature_engine - INFO - Usando cache para ema{'period': 12}
+2025-07-04 00:11:54,585 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-04 00:11:54,587 - src.feature_engine - INFO - Usando cache para ema{'period': 26}
+2025-07-04 00:11:54,588 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-04 00:11:54,588 - src.feature_engine - INFO - Usando cache para sma{'period': 20}
+2025-07-04 00:11:54,589 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-04 00:11:54,635 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-04 00:13:26,314 - src.feature_engine - INFO - Usando cache para rsi{'period': 14}
+2025-07-04 00:13:26,315 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-04 00:13:26,319 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-04 00:13:26,320 - src.feature_engine - INFO - Usando cache para ema{'period': 12}
+2025-07-04 00:13:26,321 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-04 00:13:26,322 - src.feature_engine - INFO - Usando cache para ema{'period': 26}
+2025-07-04 00:13:26,324 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-04 00:13:26,326 - src.feature_engine - INFO - Usando cache para sma{'period': 20}
+2025-07-04 00:13:26,327 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-04 00:13:26,343 - src.feature_engine - INFO - Features exportados a: ..data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-04 00:16:56,017 - src.plugins - INFO - Indicador 'sma' registrado exitosamente
+2025-07-04 00:16:56,018 - src.plugins - INFO - Indicador 'ema' registrado exitosamente
+2025-07-04 00:16:56,019 - src.plugins - INFO - Indicador 'rsi' registrado exitosamente
+2025-07-04 00:16:56,019 - src.plugins - INFO - Indicador 'bollinger_bands' registrado exitosamente
+2025-07-04 00:16:56,020 - src.plugins - INFO - Indicador 'macd' registrado exitosamente
+2025-07-04 00:16:56,021 - src.plugins - INFO - Indicador 'atr' registrado exitosamente
+2025-07-04 00:16:56,021 - src.plugins - INFO - Indicador 'stochastic' registrado exitosamente
+2025-07-04 00:16:56,022 - src.plugins - INFO - Indicador 'volume_sma' registrado exitosamente
+2025-07-04 00:16:56,022 - src.plugins - INFO - Indicador 'price_volume_trend' registrado exitosamente
+2025-07-04 00:16:56,023 - src.plugins - INFO - Indicador 'momentum' registrado exitosamente
+2025-07-04 00:16:56,024 - src.plugins - INFO - Indicador 'volatility' registrado exitosamente
+2025-07-04 00:16:56,025 - src.plugins - INFO - Indicador 'support_resistance' registrado exitosamente
+2025-07-04 00:16:56,030 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-04 00:16:56,032 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-04 00:17:04,967 - src.feature_engine - WARNING - Valores faltantes detectados en rsi, aplicando imputación
+2025-07-04 00:17:04,973 - src.feature_engine - INFO - Serie rsi normalizada con minmax
+2025-07-04 00:17:04,975 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-04 00:17:04,983 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-04 00:17:04,989 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 00:17:04,991 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-04 00:17:04,996 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 00:17:04,999 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-04 00:17:05,001 - src.feature_engine - WARNING - Valores faltantes detectados en sma, aplicando imputación
+2025-07-04 00:17:05,004 - src.feature_engine - INFO - Serie sma normalizada con standard
+2025-07-04 00:17:05,004 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-04 00:17:05,017 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-04 00:17:44,335 - src.plugins - INFO - Indicador 'sma' registrado exitosamente
+2025-07-04 00:17:44,336 - src.plugins - INFO - Indicador 'ema' registrado exitosamente
+2025-07-04 00:17:44,337 - src.plugins - INFO - Indicador 'rsi' registrado exitosamente
+2025-07-04 00:17:44,337 - src.plugins - INFO - Indicador 'bollinger_bands' registrado exitosamente
+2025-07-04 00:17:44,338 - src.plugins - INFO - Indicador 'macd' registrado exitosamente
+2025-07-04 00:17:44,339 - src.plugins - INFO - Indicador 'atr' registrado exitosamente
+2025-07-04 00:17:44,340 - src.plugins - INFO - Indicador 'stochastic' registrado exitosamente
+2025-07-04 00:17:44,340 - src.plugins - INFO - Indicador 'volume_sma' registrado exitosamente
+2025-07-04 00:17:44,341 - src.plugins - INFO - Indicador 'price_volume_trend' registrado exitosamente
+2025-07-04 00:17:44,341 - src.plugins - INFO - Indicador 'momentum' registrado exitosamente
+2025-07-04 00:17:44,342 - src.plugins - INFO - Indicador 'volatility' registrado exitosamente
+2025-07-04 00:17:44,342 - src.plugins - INFO - Indicador 'support_resistance' registrado exitosamente
+2025-07-04 00:17:44,347 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-04 00:17:44,349 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-04 00:24:46,835 - src.plugins - INFO - Indicador 'sma' registrado exitosamente
+2025-07-04 00:24:46,836 - src.plugins - INFO - Indicador 'ema' registrado exitosamente
+2025-07-04 00:24:46,838 - src.plugins - INFO - Indicador 'rsi' registrado exitosamente
+2025-07-04 00:24:46,839 - src.plugins - INFO - Indicador 'bollinger_bands' registrado exitosamente
+2025-07-04 00:24:46,841 - src.plugins - INFO - Indicador 'macd' registrado exitosamente
+2025-07-04 00:24:46,842 - src.plugins - INFO - Indicador 'atr' registrado exitosamente
+2025-07-04 00:24:46,844 - src.plugins - INFO - Indicador 'stochastic' registrado exitosamente
+2025-07-04 00:24:46,846 - src.plugins - INFO - Indicador 'volume_sma' registrado exitosamente
+2025-07-04 00:24:46,847 - src.plugins - INFO - Indicador 'price_volume_trend' registrado exitosamente
+2025-07-04 00:24:46,848 - src.plugins - INFO - Indicador 'momentum' registrado exitosamente
+2025-07-04 00:24:46,849 - src.plugins - INFO - Indicador 'volatility' registrado exitosamente
+2025-07-04 00:24:46,849 - src.plugins - INFO - Indicador 'support_resistance' registrado exitosamente
+2025-07-04 00:24:46,858 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-04 00:24:46,860 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-04 00:24:49,294 - src.feature_engine - WARNING - Valores faltantes detectados en rsi, aplicando imputación
+2025-07-04 00:24:49,301 - src.feature_engine - INFO - Serie rsi normalizada con minmax
+2025-07-04 00:24:49,303 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-04 00:24:49,314 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-04 00:24:49,316 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 00:24:49,318 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-04 00:24:49,324 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 00:24:49,326 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-04 00:24:49,327 - src.feature_engine - WARNING - Valores faltantes detectados en sma, aplicando imputación
+2025-07-04 00:24:49,330 - src.feature_engine - INFO - Serie sma normalizada con standard
+2025-07-04 00:24:49,331 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-04 00:24:49,343 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-04 17:46:44,603 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-04 17:46:44,605 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-04 18:53:44,862 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-04 18:54:25,518 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-04 18:54:25,532 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-04 19:14:46,150 - src.registry - INFO - Indicador 'sma' registrado
+2025-07-04 19:14:46,152 - src.registry - INFO - Indicador 'ema' registrado
+2025-07-04 19:14:46,153 - src.registry - INFO - Indicador 'rsi' registrado
+2025-07-04 19:14:46,155 - src.registry - INFO - Indicador 'stochastic' registrado
+2025-07-04 19:14:46,156 - src.registry - INFO - Indicador 'bollinger_bands' registrado
+2025-07-04 19:14:46,156 - src.registry - INFO - Indicador 'atr' registrado
+2025-07-04 19:14:46,157 - src.registry - INFO - Indicador 'macd' registrado
+2025-07-04 19:14:46,158 - src.registry - INFO - Indicador 'momentum' registrado
+2025-07-04 19:14:46,158 - src.registry - INFO - Indicador 'volume_sma' registrado
+2025-07-04 19:14:46,159 - src.registry - INFO - Indicador 'price_volume_trend' registrado
+2025-07-04 19:14:46,160 - src.registry - INFO - Indicador 'support_resistance' registrado
+2025-07-04 19:14:46,859 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-04 19:14:46,862 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-04 19:14:46,887 - src.feature_engine - WARNING - Valores faltantes detectados en rsi, aplicando imputación
+2025-07-04 19:14:46,897 - src.feature_engine - INFO - Serie rsi normalizada con minmax
+2025-07-04 19:14:46,897 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-04 19:14:46,903 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-04 19:14:46,905 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 19:14:46,906 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-04 19:14:46,908 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 19:14:46,909 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-04 19:14:46,910 - src.feature_engine - WARNING - Valores faltantes detectados en sma, aplicando imputación
+2025-07-04 19:14:46,913 - src.feature_engine - INFO - Serie sma normalizada con standard
+2025-07-04 19:14:46,914 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-04 19:14:46,929 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-04 19:18:12,270 - src.registry - INFO - Indicador 'sma' registrado
+2025-07-04 19:18:12,271 - src.registry - INFO - Indicador 'ema' registrado
+2025-07-04 19:18:12,272 - src.registry - INFO - Indicador 'rsi' registrado
+2025-07-04 19:18:12,272 - src.registry - INFO - Indicador 'stochastic' registrado
+2025-07-04 19:18:12,273 - src.registry - INFO - Indicador 'bollinger_bands' registrado
+2025-07-04 19:18:12,273 - src.registry - INFO - Indicador 'atr' registrado
+2025-07-04 19:18:12,274 - src.registry - INFO - Indicador 'macd' registrado
+2025-07-04 19:18:12,275 - src.registry - INFO - Indicador 'momentum' registrado
+2025-07-04 19:18:12,276 - src.registry - INFO - Indicador 'volume_sma' registrado
+2025-07-04 19:18:12,276 - src.registry - INFO - Indicador 'price_volume_trend' registrado
+2025-07-04 19:18:12,277 - src.registry - INFO - Indicador 'support_resistance' registrado
+2025-07-04 19:18:12,925 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-04 19:18:12,927 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-04 19:18:12,938 - src.feature_engine - WARNING - Valores faltantes detectados en rsi, aplicando imputación
+2025-07-04 19:18:12,940 - src.feature_engine - INFO - Serie rsi normalizada con minmax
+2025-07-04 19:18:12,941 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-04 19:18:12,945 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-04 19:18:12,947 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 19:18:12,948 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-04 19:18:12,950 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-04 19:18:12,951 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-04 19:18:12,953 - src.feature_engine - WARNING - Valores faltantes detectados en sma, aplicando imputación
+2025-07-04 19:18:12,955 - src.feature_engine - INFO - Serie sma normalizada con standard
+2025-07-04 19:18:12,956 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-04 19:18:12,966 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
