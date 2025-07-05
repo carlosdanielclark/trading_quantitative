@@ -227,3 +227,68 @@
 2025-07-04 19:18:12,955 - src.feature_engine - INFO - Serie sma normalizada con standard
 2025-07-04 19:18:12,956 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
 2025-07-04 19:18:12,966 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-05 04:48:04,590 - src.indicators - INFO - Indicador 'sma' registrado
+2025-07-05 04:48:04,591 - src.indicators - INFO - Indicador 'ema' registrado
+2025-07-05 04:48:04,591 - src.indicators - INFO - Indicador 'rsi' registrado
+2025-07-05 04:48:04,591 - src.indicators - INFO - Indicador 'stochastic' registrado
+2025-07-05 04:48:04,592 - src.indicators - INFO - Indicador 'bollinger_bands' registrado
+2025-07-05 04:48:04,593 - src.indicators - INFO - Indicador 'atr' registrado
+2025-07-05 04:48:04,594 - src.indicators - INFO - Indicador 'macd' registrado
+2025-07-05 04:48:04,594 - src.indicators - INFO - Indicador 'momentum' registrado
+2025-07-05 04:48:04,596 - src.indicators - INFO - Indicador 'volume_sma' registrado
+2025-07-05 04:48:04,596 - src.indicators - INFO - Indicador 'price_volume_trend' registrado
+2025-07-05 04:48:04,597 - src.indicators - INFO - Indicador 'support_resistance' registrado
+2025-07-05 04:48:05,239 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-05 04:48:05,240 - src.feature_engine - INFO - FeatureEngine inicializado con 5 registros
+2025-07-05 04:53:02,220 - src.indicators - INFO - Indicador 'sma' registrado
+2025-07-05 04:53:02,221 - src.indicators - INFO - Indicador 'ema' registrado
+2025-07-05 04:53:02,221 - src.indicators - INFO - Indicador 'rsi' registrado
+2025-07-05 04:53:02,222 - src.indicators - INFO - Indicador 'stochastic' registrado
+2025-07-05 04:53:02,223 - src.indicators - INFO - Indicador 'bollinger_bands' registrado
+2025-07-05 04:53:02,224 - src.indicators - INFO - Indicador 'atr' registrado
+2025-07-05 04:53:02,224 - src.indicators - INFO - Indicador 'macd' registrado
+2025-07-05 04:53:02,225 - src.indicators - INFO - Indicador 'momentum' registrado
+2025-07-05 04:53:02,226 - src.indicators - INFO - Indicador 'volume_sma' registrado
+2025-07-05 04:53:02,227 - src.indicators - INFO - Indicador 'price_volume_trend' registrado
+2025-07-05 04:53:02,228 - src.indicators - INFO - Indicador 'support_resistance' registrado
+2025-07-05 04:53:02,873 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-05 04:53:02,875 - src.feature_engine - INFO - FeatureEngine inicializado con 5 registros
+2025-07-05 05:01:16,652 - src.indicators - INFO - Indicador 'sma' registrado
+2025-07-05 05:01:16,653 - src.indicators - INFO - Indicador 'ema' registrado
+2025-07-05 05:01:16,654 - src.indicators - INFO - Indicador 'rsi' registrado
+2025-07-05 05:01:16,654 - src.indicators - INFO - Indicador 'stochastic' registrado
+2025-07-05 05:01:16,654 - src.indicators - INFO - Indicador 'bollinger_bands' registrado
+2025-07-05 05:01:16,655 - src.indicators - INFO - Indicador 'atr' registrado
+2025-07-05 05:01:16,656 - src.indicators - INFO - Indicador 'macd' registrado
+2025-07-05 05:01:16,657 - src.indicators - INFO - Indicador 'momentum' registrado
+2025-07-05 05:01:16,657 - src.indicators - INFO - Indicador 'volume_sma' registrado
+2025-07-05 05:01:16,658 - src.indicators - INFO - Indicador 'price_volume_trend' registrado
+2025-07-05 05:01:16,659 - src.indicators - INFO - Indicador 'support_resistance' registrado
+2025-07-05 05:01:17,315 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-05 05:01:17,317 - src.feature_engine - INFO - FeatureEngine inicializado con 5 registros
+2025-07-05 05:01:50,803 - src.indicators - INFO - Indicador 'sma' registrado
+2025-07-05 05:01:50,803 - src.indicators - INFO - Indicador 'ema' registrado
+2025-07-05 05:01:50,804 - src.indicators - INFO - Indicador 'rsi' registrado
+2025-07-05 05:01:50,805 - src.indicators - INFO - Indicador 'stochastic' registrado
+2025-07-05 05:01:50,806 - src.indicators - INFO - Indicador 'bollinger_bands' registrado
+2025-07-05 05:01:50,807 - src.indicators - INFO - Indicador 'atr' registrado
+2025-07-05 05:01:50,808 - src.indicators - INFO - Indicador 'macd' registrado
+2025-07-05 05:01:50,809 - src.indicators - INFO - Indicador 'momentum' registrado
+2025-07-05 05:01:50,811 - src.indicators - INFO - Indicador 'volume_sma' registrado
+2025-07-05 05:01:50,813 - src.indicators - INFO - Indicador 'price_volume_trend' registrado
+2025-07-05 05:01:50,814 - src.indicators - INFO - Indicador 'support_resistance' registrado
+2025-07-05 05:01:51,407 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-05 05:01:51,409 - src.feature_engine - INFO - FeatureEngine inicializado con 5 registros
+2025-07-05 05:03:08,913 - src.indicators - INFO - Indicador 'sma' registrado
+2025-07-05 05:03:08,913 - src.indicators - INFO - Indicador 'ema' registrado
+2025-07-05 05:03:08,914 - src.indicators - INFO - Indicador 'rsi' registrado
+2025-07-05 05:03:08,914 - src.indicators - INFO - Indicador 'stochastic' registrado
+2025-07-05 05:03:08,916 - src.indicators - INFO - Indicador 'bollinger_bands' registrado
+2025-07-05 05:03:08,917 - src.indicators - INFO - Indicador 'atr' registrado
+2025-07-05 05:03:08,919 - src.indicators - INFO - Indicador 'macd' registrado
+2025-07-05 05:03:08,920 - src.indicators - INFO - Indicador 'momentum' registrado
+2025-07-05 05:03:08,921 - src.indicators - INFO - Indicador 'volume_sma' registrado
+2025-07-05 05:03:08,922 - src.indicators - INFO - Indicador 'price_volume_trend' registrado
+2025-07-05 05:03:08,924 - src.indicators - INFO - Indicador 'support_resistance' registrado
+2025-07-05 05:03:09,672 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-05 05:03:09,674 - src.feature_engine - INFO - FeatureEngine inicializado con 5 registros
