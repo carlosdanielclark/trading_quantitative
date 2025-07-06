@@ -88,4 +88,4 @@
     ```
 **5. Ejecutar proyecto**
 
-    > python run_pipeline
+    > python run_pipeline.py

@@ -303,7 +303,7 @@ class DataFetcher:
             raise ValueError(f"Formato no soportado: {file_format}")
 
         logger.info(f"Datos guardados en: {filepath}")
-        return str
+        return str(filepath)
 
 # Función para usar externamente
 def fetch_and_save_data():
