@@ -55,12 +55,19 @@ feature_engine:
         period: 20
 
 # CONFIGURACIÓN DE LA ESTRATEGIA
-strategy:
-  name: "rsi_bollinger_strategy"
-  parameters:
-    rsi_oversold: 30
-    rsi_overbought: 70
-    bollinger_entry_threshold: 0.02
+randomforest:
+  n_estimators: 100
+  max_depth: 5
+  window_size: 30         # Tamaño de ventana móvil para entrenamiento (opcional)
+  grid_search: true
+  param_grid:
+    n_estimators: [50, 100, 200]
+    max_depth: [3, 5, 7, null]
+  export_signals_path: data/processed/signals.parquet
+  export_positions_path: data/processed/positions.parquet
+  export_metrics_path: data/processed/metrics.csv
+  features_path: data/processed/features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+
 
 # CONFIGURACIÓN DEL BACKTESTING
 backtest:

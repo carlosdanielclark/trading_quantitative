@@ -371,3 +371,331 @@
 2025-07-06 10:07:57,679 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
 2025-07-06 10:07:57,679 - Pipeline - INFO - PASO2: Features generados y exportados correctamente a data/processed/features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
 2025-07-06 10:07:57,680 - Pipeline - INFO - Pipeline finalizado.
+2025-07-07 16:35:19,901 - src.indicators - INFO - Indicador 'sma' registrado
+2025-07-07 16:35:19,901 - src.indicators - INFO - Indicador 'ema' registrado
+2025-07-07 16:35:19,901 - src.indicators - INFO - Indicador 'rsi' registrado
+2025-07-07 16:35:19,902 - src.indicators - INFO - Indicador 'stochastic' registrado
+2025-07-07 16:35:19,902 - src.indicators - INFO - Indicador 'bollinger_bands' registrado
+2025-07-07 16:35:19,902 - src.indicators - INFO - Indicador 'atr' registrado
+2025-07-07 16:35:19,902 - src.indicators - INFO - Indicador 'macd' registrado
+2025-07-07 16:35:19,903 - src.indicators - INFO - Indicador 'momentum' registrado
+2025-07-07 16:35:19,903 - src.indicators - INFO - Indicador 'volume_sma' registrado
+2025-07-07 16:35:19,903 - src.indicators - INFO - Indicador 'price_volume_trend' registrado
+2025-07-07 16:35:19,903 - src.indicators - INFO - Indicador 'support_resistance' registrado
+2025-07-07 16:35:19,985 - Pipeline - INFO - Iniciando pipeline de trading
+2025-07-07 16:35:19,994 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-07 16:35:19,995 - Pipeline - INFO - PASO 1: Extracción de datos
+2025-07-07 16:35:19,996 - DataFetcher - INFO - DataFetcher inicializado para BTCUSDT/1h
+2025-07-07 16:35:19,999 - DataFetcher - INFO - Registros estimados: 4368
+2025-07-07 16:35:20,000 - DataFetcher - INFO - Descargando datos con paginación: 2024-01-01 - 2024-07-01
+2025-07-07 16:35:22,661 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:23,800 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:25,028 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:26,960 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:28,092 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:29,418 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:31,159 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:32,492 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:33,935 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:35,260 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:36,386 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:37,718 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:38,743 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:39,865 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:41,092 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:42,225 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:43,447 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:44,679 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:46,340 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:47,448 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:48,874 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:50,209 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:50,393 - DataFetcher - INFO - Datos guardados en: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\data\raw\BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:35:50,395 - DataFetcher - INFO - Registros estimados: 4368
+2025-07-07 16:35:50,396 - DataFetcher - INFO - Descargando datos con paginación: 2024-01-01 - 2024-07-01
+2025-07-07 16:35:51,514 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:52,871 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:53,920 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:55,020 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:56,249 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:57,477 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:35:58,606 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:00,448 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:01,574 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:02,623 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:03,635 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:04,752 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:05,874 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:07,922 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:09,054 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:10,380 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:11,404 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:12,733 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:13,863 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:15,100 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:16,137 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:17,241 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:36:17,352 - Pipeline - INFO - Datos descargados exitosamente. Registros: 4348
+2025-07-07 16:36:17,352 - Pipeline - INFO - PASO2: Cálculo de features (feature_engine)
+2025-07-07 16:36:17,354 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-07 16:36:17,378 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-07 16:36:17,382 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-07 16:36:17,386 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-07 16:36:17,387 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-07 16:36:17,390 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-07 16:36:17,391 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-07 16:36:17,392 - src.feature_engine - WARNING - Valores faltantes detectados en sma, aplicando imputación
+2025-07-07 16:36:17,394 - src.feature_engine - INFO - Serie sma normalizada con standard
+2025-07-07 16:36:17,395 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-07 16:36:17,412 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:36:17,412 - Pipeline - INFO - PASO2: Features generados y exportados correctamente a data/processed/features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:36:17,413 - Pipeline - INFO - PASO3: Ejecución de la estrategia Random Forest (strategy.py)
+2025-07-07 16:36:17,421 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-07 16:36:17,422 - Pipeline - ERROR - Error ejecutando la estrategia: [Errno 2] No such file or directory: 'data/processed/features.parquet'
+2025-07-07 16:36:17,422 - Pipeline - INFO - Pipeline finalizado.
+2025-07-07 16:39:21,626 - src.indicators - INFO - Indicador 'sma' registrado
+2025-07-07 16:39:21,627 - src.indicators - INFO - Indicador 'ema' registrado
+2025-07-07 16:39:21,627 - src.indicators - INFO - Indicador 'rsi' registrado
+2025-07-07 16:39:21,628 - src.indicators - INFO - Indicador 'stochastic' registrado
+2025-07-07 16:39:21,628 - src.indicators - INFO - Indicador 'bollinger_bands' registrado
+2025-07-07 16:39:21,628 - src.indicators - INFO - Indicador 'atr' registrado
+2025-07-07 16:39:21,628 - src.indicators - INFO - Indicador 'macd' registrado
+2025-07-07 16:39:21,629 - src.indicators - INFO - Indicador 'momentum' registrado
+2025-07-07 16:39:21,629 - src.indicators - INFO - Indicador 'volume_sma' registrado
+2025-07-07 16:39:21,629 - src.indicators - INFO - Indicador 'price_volume_trend' registrado
+2025-07-07 16:39:21,629 - src.indicators - INFO - Indicador 'support_resistance' registrado
+2025-07-07 16:39:21,679 - Pipeline - INFO - Iniciando pipeline de trading
+2025-07-07 16:39:21,707 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-07 16:39:21,707 - Pipeline - INFO - PASO 1: Extracción de datos
+2025-07-07 16:39:21,708 - DataFetcher - INFO - DataFetcher inicializado para BTCUSDT/1h
+2025-07-07 16:39:21,710 - DataFetcher - INFO - Registros estimados: 4368
+2025-07-07 16:39:21,710 - DataFetcher - INFO - Descargando datos con paginación: 2024-01-01 - 2024-07-01
+2025-07-07 16:39:23,618 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:25,248 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:26,990 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:28,935 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:30,133 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:31,805 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:33,138 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:34,217 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:35,286 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:36,365 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:37,745 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:39,075 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:40,406 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:41,604 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:42,969 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:43,990 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:45,121 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:46,861 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:47,993 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:49,044 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:50,133 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:51,364 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:51,521 - DataFetcher - INFO - Datos guardados en: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\data\raw\BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:39:51,523 - DataFetcher - INFO - Registros estimados: 4368
+2025-07-07 16:39:51,523 - DataFetcher - INFO - Descargando datos con paginación: 2024-01-01 - 2024-07-01
+2025-07-07 16:39:53,204 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:54,239 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:55,359 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:56,477 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:57,629 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:58,736 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:39:59,963 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:01,090 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:02,320 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:03,460 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:04,571 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:05,602 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:06,826 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:07,825 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:09,285 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:10,417 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:12,084 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:13,276 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:14,372 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:15,443 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:16,657 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:17,782 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:40:17,892 - Pipeline - INFO - Datos descargados exitosamente. Registros: 4348
+2025-07-07 16:40:17,893 - Pipeline - INFO - PASO2: Cálculo de features (feature_engine)
+2025-07-07 16:40:17,894 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-07 16:40:17,900 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-07 16:40:17,906 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-07 16:40:17,909 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-07 16:40:17,910 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-07 16:40:17,912 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-07 16:40:17,913 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-07 16:40:17,914 - src.feature_engine - WARNING - Valores faltantes detectados en sma, aplicando imputación
+2025-07-07 16:40:17,916 - src.feature_engine - INFO - Serie sma normalizada con standard
+2025-07-07 16:40:17,917 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-07 16:40:17,933 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:40:17,934 - Pipeline - INFO - PASO2: Features generados y exportados correctamente a data/processed/features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:40:17,934 - Pipeline - INFO - PASO3: Ejecución de la estrategia Random Forest (strategy.py)
+2025-07-07 16:40:17,943 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-07 16:40:18,801 - src.strategy - INFO - Features cargados desde data/processed/features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet con shape (4329, 9)
+2025-07-07 16:40:18,802 - Pipeline - ERROR - Error ejecutando la estrategia: 'close'
+2025-07-07 16:40:18,803 - Pipeline - INFO - Pipeline finalizado.
+2025-07-07 16:53:04,243 - src.indicators - INFO - Indicador 'sma' registrado
+2025-07-07 16:53:04,243 - src.indicators - INFO - Indicador 'ema' registrado
+2025-07-07 16:53:04,243 - src.indicators - INFO - Indicador 'rsi' registrado
+2025-07-07 16:53:04,244 - src.indicators - INFO - Indicador 'stochastic' registrado
+2025-07-07 16:53:04,244 - src.indicators - INFO - Indicador 'bollinger_bands' registrado
+2025-07-07 16:53:04,244 - src.indicators - INFO - Indicador 'atr' registrado
+2025-07-07 16:53:04,244 - src.indicators - INFO - Indicador 'macd' registrado
+2025-07-07 16:53:04,245 - src.indicators - INFO - Indicador 'momentum' registrado
+2025-07-07 16:53:04,245 - src.indicators - INFO - Indicador 'volume_sma' registrado
+2025-07-07 16:53:04,245 - src.indicators - INFO - Indicador 'price_volume_trend' registrado
+2025-07-07 16:53:04,245 - src.indicators - INFO - Indicador 'support_resistance' registrado
+2025-07-07 16:53:04,294 - Pipeline - INFO - Iniciando pipeline de trading
+2025-07-07 16:53:04,299 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-07 16:53:04,299 - Pipeline - INFO - PASO 1: Extracción de datos
+2025-07-07 16:53:04,300 - DataFetcher - INFO - DataFetcher inicializado para BTCUSDT/1h
+2025-07-07 16:53:04,302 - DataFetcher - INFO - Registros estimados: 4368
+2025-07-07 16:53:04,302 - DataFetcher - INFO - Descargando datos con paginación: 2024-01-01 - 2024-07-01
+2025-07-07 16:53:05,698 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:07,503 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:09,069 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:10,301 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:11,530 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:13,172 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:14,412 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:16,277 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:17,469 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:18,615 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:20,183 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:21,463 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:22,491 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:23,497 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:25,047 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:26,171 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:27,302 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:28,329 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:29,525 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:30,780 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:31,804 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:32,828 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:32,986 - DataFetcher - INFO - Datos guardados en: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\data\raw\BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:53:32,988 - DataFetcher - INFO - Registros estimados: 4368
+2025-07-07 16:53:32,988 - DataFetcher - INFO - Descargando datos con paginación: 2024-01-01 - 2024-07-01
+2025-07-07 16:53:33,954 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:35,671 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:37,128 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:38,259 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:39,486 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:40,822 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:41,945 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:43,067 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:44,844 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:45,832 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:46,963 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:48,085 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:49,114 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:50,235 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:51,888 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:53,515 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:54,570 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:55,663 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:56,688 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:57,712 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:58,776 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:59,767 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:53:59,878 - Pipeline - INFO - Datos descargados exitosamente. Registros: 4348
+2025-07-07 16:53:59,879 - Pipeline - INFO - PASO2: Cálculo de features (feature_engine)
+2025-07-07 16:53:59,880 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-07 16:53:59,886 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-07 16:53:59,890 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-07 16:53:59,892 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-07 16:53:59,893 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-07 16:53:59,895 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-07 16:53:59,896 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-07 16:53:59,897 - src.feature_engine - WARNING - Valores faltantes detectados en sma, aplicando imputación
+2025-07-07 16:53:59,899 - src.feature_engine - INFO - Serie sma normalizada con standard
+2025-07-07 16:53:59,899 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-07 16:55:16,690 - src.indicators - INFO - Indicador 'sma' registrado
+2025-07-07 16:55:16,690 - src.indicators - INFO - Indicador 'ema' registrado
+2025-07-07 16:55:16,690 - src.indicators - INFO - Indicador 'rsi' registrado
+2025-07-07 16:55:16,690 - src.indicators - INFO - Indicador 'stochastic' registrado
+2025-07-07 16:55:16,691 - src.indicators - INFO - Indicador 'bollinger_bands' registrado
+2025-07-07 16:55:16,691 - src.indicators - INFO - Indicador 'atr' registrado
+2025-07-07 16:55:16,691 - src.indicators - INFO - Indicador 'macd' registrado
+2025-07-07 16:55:16,691 - src.indicators - INFO - Indicador 'momentum' registrado
+2025-07-07 16:55:16,691 - src.indicators - INFO - Indicador 'volume_sma' registrado
+2025-07-07 16:55:16,692 - src.indicators - INFO - Indicador 'price_volume_trend' registrado
+2025-07-07 16:55:16,692 - src.indicators - INFO - Indicador 'support_resistance' registrado
+2025-07-07 16:55:16,738 - Pipeline - INFO - Iniciando pipeline de trading
+2025-07-07 16:55:16,742 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-07 16:55:16,743 - Pipeline - INFO - PASO 1: Extracción de datos
+2025-07-07 16:55:16,743 - DataFetcher - INFO - DataFetcher inicializado para BTCUSDT/1h
+2025-07-07 16:55:16,745 - DataFetcher - INFO - Registros estimados: 4368
+2025-07-07 16:55:16,746 - DataFetcher - INFO - Descargando datos con paginación: 2024-01-01 - 2024-07-01
+2025-07-07 16:55:18,609 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:20,041 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:21,857 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:23,219 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:24,283 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:25,680 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:26,808 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:27,927 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:29,770 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:32,228 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:34,071 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:35,196 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:36,631 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:37,756 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:38,880 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:39,918 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:41,048 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:42,163 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:43,358 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:44,934 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:46,666 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:47,799 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:47,959 - DataFetcher - INFO - Datos guardados en: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\data\raw\BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:55:47,962 - DataFetcher - INFO - Registros estimados: 4368
+2025-07-07 16:55:47,963 - DataFetcher - INFO - Descargando datos con paginación: 2024-01-01 - 2024-07-01
+2025-07-07 16:55:48,920 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:50,252 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:51,965 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:53,042 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:54,248 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:55,298 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:56,397 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:57,472 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:58,480 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:55:59,481 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:00,495 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:01,724 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:03,154 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:04,280 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:05,406 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:06,433 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:07,761 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:08,812 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:09,914 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:10,909 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:12,491 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:13,597 - DataFetcher - INFO - Procesados 200 registros
+2025-07-07 16:56:13,707 - Pipeline - INFO - Datos descargados exitosamente. Registros: 4348
+2025-07-07 16:56:13,707 - Pipeline - INFO - PASO2: Cálculo de features (feature_engine)
+2025-07-07 16:56:13,708 - src.feature_engine - INFO - FeatureEngine inicializado con 4348 registros
+2025-07-07 16:56:13,715 - src.feature_engine - INFO - Feature 'rsi_period14' añadido exitosamente
+2025-07-07 16:56:13,719 - src.feature_engine - INFO - Añadido indicador múltiple bollinger_bands con 5 features
+2025-07-07 16:56:13,722 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-07 16:56:13,722 - src.feature_engine - INFO - Feature 'ema_period12' añadido exitosamente
+2025-07-07 16:56:13,724 - src.feature_engine - INFO - Serie ema normalizada con standard
+2025-07-07 16:56:13,725 - src.feature_engine - INFO - Feature 'ema_period26' añadido exitosamente
+2025-07-07 16:56:13,726 - src.feature_engine - WARNING - Valores faltantes detectados en sma, aplicando imputación
+2025-07-07 16:56:13,728 - src.feature_engine - INFO - Serie sma normalizada con standard
+2025-07-07 16:56:13,729 - src.feature_engine - INFO - Feature 'sma_period20' añadido exitosamente
+2025-07-07 16:56:13,750 - src.feature_engine - INFO - Features exportados a: data\processed\features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:56:13,750 - Pipeline - INFO - PASO2: Features generados y exportados correctamente a data/processed/features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet
+2025-07-07 16:56:13,751 - Pipeline - INFO - PASO3: Ejecución de la estrategia Random Forest (strategy.py)
+2025-07-07 16:56:13,758 - src.utils - INFO - Configuración cargada exitosamente desde: C:\Users\DELL-LATITUDE\Documents\My_Projects\PYTHON\trading_quantitative\config\config.yaml
+2025-07-07 16:56:13,821 - src.strategy - INFO - Features cargados desde data/processed/features_BTCUSDT_1h_2024-01-01_2024-07-01.parquet con shape (4329, 10)
+2025-07-07 16:56:24,295 - src.strategy - INFO - Mejores parámetros encontrados: {'max_depth': 3, 'n_estimators': 100}
+2025-07-07 17:04:19,739 - src.strategy - INFO - Predicción con ventana móvil finalizada.
+2025-07-07 17:04:19,749 - src.strategy - INFO - Métricas de validación: {'accuracy': 0.48417868776174966, 'precision': 0.4836172910262422, 'recall': 0.4836525849360901, 'f1': 0.48352420228413995}
+2025-07-07 17:04:19,773 - src.strategy - INFO - Resultados exportados correctamente.
+2025-07-07 17:04:19,774 - Pipeline - INFO - Estrategia ejecutada y señales generadas correctamente.
+2025-07-07 17:04:19,774 - Pipeline - INFO - Pipeline finalizado.

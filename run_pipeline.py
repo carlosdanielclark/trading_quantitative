@@ -7,6 +7,9 @@ from src.data_fetcher import DataFetcher
 from src.feature_engine import FeatureEngine
 from src.utils import load_config
 
+# --- NUEVO: Importa el módulo de estrategia ---
+from src.strategy import main as run_strategy
+
 # Crear directorio de logs si no existe
 Path("logs").mkdir(exist_ok=True)
 
@@ -31,7 +34,7 @@ def main():
     feature_config = config['feature_engine']   # <--- ¡Aquí defines feature_config!
 
 
-    # PASO 1: Extracción de datos
+    # --- PASO 1: Extracción de datos ---
     logger.info("PASO 1: Extracción de datos")
     fetcher = DataFetcher(data_config)
     df = fetcher.fetch_ohlcv(
@@ -45,8 +48,8 @@ def main():
 
     logger.info(f"Datos descargados exitosamente. Registros: {len(df)}")
     
-    # PASO 2: Generación de features
-    logger.info("PASO2: Generación de features (feature_engine)")
+    # --- PASO 2: Cálculo de features ---
+    logger.info("PASO2: Cálculo de features (feature_engine)")
 
     # Instanciar el motor de features con los datos descargados
     feature_engine = FeatureEngine(df, cache_enabled=data_config['storage'].get('cache_enabled', True))
@@ -54,6 +57,9 @@ def main():
     # Añadir todos los indicadores definidos en el config
     indicators = feature_config.get('indicators', [])
     feature_engine.add_multiple_indicators(indicators)
+    
+    # --- Agrega la columna 'close' al DataFrame de features ---
+    feature_engine.features['close'] = df['close']
 
     # Exportar features a la carpeta de processed
     processed_path = data_config['storage']['processed_path']
@@ -67,8 +73,16 @@ def main():
     feature_engine.export_features(path=features_filename, format=file_format)
 
     logger.info(f"PASO2: Features generados y exportados correctamente a {features_filename}")
+
+     # --- PASO 3: Estrategia Random Forest ---
+    logger.info("PASO3: Ejecución de la estrategia Random Forest (strategy.py)")
+    try:
+        run_strategy()  # Usa la configuración global del proyecto
+        logger.info("Estrategia ejecutada y señales generadas correctamente.")
+    except Exception as e:
+        logger.error(f"Error ejecutando la estrategia: {e}")
+
     logger.info("Pipeline finalizado.")
     
-
 if __name__ == "__main__":
     main()
