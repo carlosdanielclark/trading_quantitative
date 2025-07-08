@@ -2,9 +2,16 @@
 import logging
 from pathlib import Path
 from datetime import datetime
+import pandas as pd
+import numpy as np
+import plotly.graph_objects as go
+import plotly.express as px
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 from src.data_fetcher import DataFetcher
 from src.feature_engine import FeatureEngine
+from src.backtest import BacktestEngine
 from src.utils import load_config
 
 # --- NUEVO: Importa el módulo de estrategia ---
@@ -81,6 +88,82 @@ def main():
         logger.info("Estrategia ejecutada y señales generadas correctamente.")
     except Exception as e:
         logger.error(f"Error ejecutando la estrategia: {e}")
+
+    # --- PASO 4: Ejecutar backtest ---
+    logger.info("PASO4: Ejecución de backtest con módulo BacktestEngine")
+    try:
+        # Cargar configuración completa
+        config = load_config()
+
+        # Cargar features y señales desde paths configurados
+        features_path = config['randomforest']['features_path']
+        signals_path = config['randomforest']['export_signals_path']
+
+        features = pd.read_parquet(features_path)
+        signals = pd.read_parquet(signals_path)['signal']
+
+        # Alinear índices
+        features = features.loc[signals.index]
+
+        # Instanciar motor de backtesting con configuración
+        engine = BacktestEngine(config)
+
+        # Ejecutar backtest con tamaño de posición 10%
+        results = engine.run_backtest(features, signals, position_size=0.1)
+
+        # Obtener métricas
+        metrics = engine.get_performance_metrics(results)
+        logger.info("Métricas de rendimiento del backtest:")
+        for k, v in metrics.items():
+            logger.info(f"{k}: {v}")
+
+        # Visualización 1: Curva de equity con drawdowns
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=results.equity_curve.index, y=results.equity_curve,
+                                 mode='lines', name='Equity Curve'))
+        fig.add_trace(go.Scatter(x=results.drawdowns.index,
+                                 y=results.drawdowns * results.equity_curve,
+                                 fill='tozeroy', mode='none', name='Drawdown',
+                                 fillcolor='rgba(255,0,0,0.3)'))
+        fig.update_layout(title='Curva de Equity con Drawdowns',
+                          xaxis_title='Fecha', yaxis_title='Capital')
+        fig.show()
+
+        # Visualización 2: Distribución de retornos por trade
+        trade_returns = [t.return_pct for t in results.trades if not t.is_open]
+        fig2 = px.histogram(trade_returns, nbins=50,
+                            title='Distribución de Retornos por Trade',
+                            labels={'value': 'Retorno (%)'})
+        fig2.update_layout(bargap=0.1)
+        fig2.show()
+
+        # Visualización 3: Heatmap de métricas por parámetros (simulado)
+        if config['randomforest'].get('grid_search', False):
+            import itertools
+            n_estimators = config['randomforest']['param_grid'].get('n_estimators', [100])
+            max_depth = config['randomforest']['param_grid'].get('max_depth', [5])
+            data_heatmap = []
+            for n, d in itertools.product(n_estimators, max_depth):
+                metric_val = 0.5 + 0.4 * np.random.rand()  # Simulación métrica
+                data_heatmap.append({'n_estimators': n, 'max_depth': d if d is not None else 'None', 'metric': metric_val})
+            df_heatmap = pd.DataFrame(data_heatmap)
+            heatmap_data = df_heatmap.pivot(index='max_depth', columns='n_estimators', values='metric')
+            plt.figure(figsize=(8,6))
+            sns.heatmap(heatmap_data, annot=True, fmt=".3f", cmap='viridis')
+            plt.title('Heatmap de Métricas por Parámetros')
+            plt.ylabel('max_depth')
+            plt.xlabel('n_estimators')
+            plt.show()
+
+        # 9. Guardar reporte PDF con métricas
+        pdf_filename = "backtest_report.pdf"
+        engine.generate_pdf_report(results, metrics, filename=pdf_filename)
+        print(f"Reporte PDF generado: {pdf_filename}")
+
+        logger.info("Backtest y visualizaciones completados correctamente.")
+
+    except Exception as e:
+        logger.error(f"Error ejecutando el backtest: {e}")
 
     logger.info("Pipeline finalizado.")
     
