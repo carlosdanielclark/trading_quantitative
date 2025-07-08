@@ -92,3 +92,7 @@
 **5. Ejecutar proyecto**
 
     > python run_pipeline.py
+
+**6. Ejecutar tests**
+
+    > pytest
