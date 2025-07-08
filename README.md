@@ -78,8 +78,11 @@
     │
     ├── test/                  # Tests unitarios
     │   ├── __init__.py        # Habilita discovery de pytest
+    │   ├── test_backtest.py
     │   ├── test_config.py
-    │   └── test_data_fetcher.py
+    │   ├── test_feature_engine.py
+    │   ├── test_data_fetcher.py  
+    │   └── test_strategy.py
     │
     ├── pytest.ini             # Configuración de pytest
     ├── requirements.txt       # Dependencias del proyecto
