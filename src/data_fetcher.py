@@ -250,25 +250,7 @@ class DataFetcher:
         signature = hashlib.sha256(sign_input.encode()).hexdigest()
 
         return nonce, timestamp, signature
-    
-    # def save_raw_data(self, df, start_date, end_date):
-    #     """
-    #     Guarda el DataFrame en data/raw/ con nombre estándar.
-    #     """
-    #     start_fmt = start_date.replace("-", "")
-    #     end_fmt = end_date.replace("-", "")
-    #     symbol = self.symbol.upper()
-    #     interval = self.interval
-    #     file_name = f"{symbol}_{interval}_{start_fmt}_{end_fmt}.parquet"
-    #     # Asegura la ruta absoluta desde el proyecto
-    #     project_root = Path(__file__).resolve().parent.parent
-    #     raw_dir = project_root / "data" / "raw"
-    #     raw_dir.mkdir(parents=True, exist_ok=True)
-    #     file_path = raw_dir / file_name
-    #     df.to_parquet(file_path)
-    #     logging.info(f"Archivo guardado: {file_path}")
-    #     return file_path
-    
+      
     def save_data(self, df: pd.DataFrame, filename: str = None) -> str:
         """Guarda los datos en el formato especificado dentro de la raíz del proyecto."""
         if df.empty:
