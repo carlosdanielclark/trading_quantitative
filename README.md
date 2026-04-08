@@ -1,98 +1,103 @@
-# Diseño, implementación y evaluación de una estrategia de trading cuantitativo sobre BTC/USDT usando datos históricos de Bitunix, indicadores técnicos y modelos de decisión
+# Quantitative Trading Strategy for BTC/USDT
 
-## Configuración del entorno de trabajo
+This project implements, evaluates, and documents a quantitative trading strategy applied to the BTC/USDT pair using historical data from Bitunix. It integrates technical indicators and machine learning models (Random Forest) to generate trading signals. The pipeline includes data fetching, feature engineering, model training, backtesting, and performance analysis, providing a complete framework for algorithmic trading research.
 
-**1. Instalar Python**
+## Design, implementation and evaluation of a quantitative trading strategy on BTC/USDT using historical data from Bitunix, technical indicators and decision models
 
-    Si no tienes Python instalado:
+## Environment setup
 
-    Descarga la última versión de Python 3.11+ desde   python.org
+**1. Install Python**
 
-    Ejecuta el instalador:
-    ✅ Marcar "Add Python to PATH"
-    ✅ Opción "Customize installation" > "Install for all users"
-    ✅ Seleccionar ruta corta (ej: C:\Python311)
+    If you don't have Python installed:
+
+    Download the latest version of Python 3.11+ from python.org
+
+    Run the installer:
+    ✅ Check "Add Python to PATH"
+    ✅ "Customize installation" > "Install for all users"
+    ✅ Select a short path (e.g., C:\Python311)
     
-    > ⚠️ En este proyecto se usa Python 3.13.5 
+    > ⚠️ This project uses Python 3.13.5
 
-**2. Crear entorno virtual**
+**2. Create virtual environment**
 
     mkdir trading_quant_project
     cd trading_quant_project
     python -m venv trading_env
 
--Activar entorno:
+- Activate environment:
 
     trading_env\Scripts\activate
 
-**3. Instalar dependencias**
+**3. Install dependencies**
 
-    Ejecuta en el entorno activado:
+    Run in the activated environment:
     pip install --upgrade pip
 
-    # Librerías principales
-    pip install pandas numpy scikit-learn matplotlib   seaborn requests pyarrow
+    # Main libraries
+    pip install pandas numpy scikit-learn matplotlib seaborn requests pyarrow
 
     # Trading/ML
     pip install ta yfinance lightgbm 
 
-    # Backtesting y visualización
+    # Backtesting and visualisation
     pip install backtesting pyfolio quantstats
 
-    # Jupyter y gestión de entornos
+    # Jupyter and environment management
     pip install jupyter ipykernel
 
-    # Configuración y logs
+    # Configuration and logs
     pip install python-dotenv configparser
 
-    # Instalar kernel personalizado para Jupyter
+    # Install custom kernel for Jupyter
     python -m ipykernel install --user --name=trading_env
 
-    Verificación:
+    Verification:
     cmd
     > pip list 
-    # Debe mostrar las librerías instaladas
+    # Should show the installed libraries
 
-**4. Estructura de directorios**
+**4. Directory structure**
 
     ```text
     trading_quant_project/
     │
-    ├── config/                # Archivos de configuración
-    │   └── config.yaml        # Parámetros configurables (fechas, intervalos, etc.)
+    ├── config/                # Configuration files
+    │   └── config.yaml        # Configurable parameters (dates, intervals, etc.)
     │
-    ├── data/                  # Datos históricos y resultados de backtesting
-    │   ├── raw/               # Datos crudos descargados
-    │   └── processed/         # Datos procesados listos para análisis
+    ├── data/                  # Historical data and backtesting results
+    │   ├── raw/               # Raw downloaded data
+    │   └── processed/         # Processed data ready for analysis
     │
-    ├── notebooks/             # Notebooks Jupyter para análisis y prototipado
+    ├── notebooks/             # Jupyter notebooks for analysis and prototyping
     │   └── exploratory.ipynb
     │
-    ├── src/                   # Código fuente de los módulos
+    ├── src/                   # Source code modules
     │   ├── __init__.py
-    │   ├── data_fetcher.py    # Extracción de datos
-    │   ├── feature_engine.py  # Cálculo de indicadores y features
-    │   ├── strategy.py        # Implementación de la estrategia
+    │   ├── data_fetcher.py    # Data extraction
+    │   ├── feature_engine.py  # Indicator calculation and features
+    │   ├── strategy.py        # Strategy implementation
     │   ├── backtest.py        # Backtesting
-    │   └── utils.py           # Funciones auxiliares
+    │   └── utils.py           # Helper functions
     │
-    ├── test/                  # Tests unitarios
-    │   ├── __init__.py        # Habilita discovery de pytest
+    ├── test/                  # Unit tests
+    │   ├── __init__.py        # Enables pytest discovery
     │   ├── test_backtest.py
     │   ├── test_config.py
     │   ├── test_feature_engine.py
     │   ├── test_data_fetcher.py  
     │   └── test_strategy.py
     │
-    ├── pytest.ini             # Configuración de pytest
-    ├── requirements.txt       # Dependencias del proyecto
-    ├── README.md              # Este archivo de instrucciones
-    └── run_pipeline.py        # Script de ejecución del pipeline
+    ├── pytest.ini             # pytest configuration
+    ├── requirements.txt       # Project dependencies
+    ├── README.md              # This instruction file
+    └── run_pipeline.py        # Pipeline execution script
     ```
-**5. Ejecutar proyecto**
+
+**5. Run the project**
 
     > python run_pipeline.py
 
-**6. Ejecutar tests**
+**6. Run tests**
 
     > pytest
